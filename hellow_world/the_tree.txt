@@ -1,0 +1,6 @@
+.
+└── sstd_introduce_qmake
+    ├── hellow_world
+    │   ├── hellow_world.pro
+    │   └── main.cpp
+    └── introduce_qmake.pro
