@@ -1,5 +1,7 @@
 *.vcxproj*
 *.sln
+release/
+debug/
 
 # C++ objects and libs
 *.slo
