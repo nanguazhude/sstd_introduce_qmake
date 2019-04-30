@@ -3,10 +3,10 @@
 
 int main(int,char **){
 
-#if defined(HAS_CONSTEXPR)
-    std::cout << "has constexpr" <<std::endl;
+#if defined(HAS_FROM_CHARS_LONGDOUBLE)
+    std::cout << "has from chars long double" <<std::endl;
 #else
-    std::cout << "do not have constexpr"<<std::endl;
+    std::cout << "do not have from chars long double"<<std::endl;
 #endif
 
 }
