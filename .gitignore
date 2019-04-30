@@ -3,7 +3,10 @@
 release/
 debug/
 bin/
-
+.vs*/
+.q*
+*.log
+*.obj
 
 # C++ objects and libs
 *.slo
