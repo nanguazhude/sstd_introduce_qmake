@@ -24,7 +24,7 @@ template<typename T>
 inline decltype(auto) streamFileName(const T & arg) {
     if constexpr (std::is_constructible_v< std::ifstream, const T & >) {
         return arg;
-    } if constexpr (std::is_constructible_v<std::ifstream, const std::wstring &>) {
+    } else if constexpr (std::is_constructible_v<std::ifstream, const std::wstring &>) {
         return arg.wstring();
     } else {
         return arg.string();
