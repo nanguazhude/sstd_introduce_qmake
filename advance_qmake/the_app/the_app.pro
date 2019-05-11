@@ -63,7 +63,7 @@ export(QMAKE_POST_LINK)
 export(QMAKE_EXTRA_COMPILERS)
 
 SOURCES += $$PWD/main.cpp
-HEADERS += $${NEW_MOC_HEADERS}
+
 
 #/*endl_input_of_latex_for_clanguage_lick*/
 #$$escape_expand(\\n\\t)
