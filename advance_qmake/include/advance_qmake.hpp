@@ -1,6 +1,7 @@
 ﻿#pragma once
 
 #include <chrono>
+#include <cassert>
 #include <fstream>
 #include <iostream>
 #include <type_traits>
