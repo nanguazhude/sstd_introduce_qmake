@@ -71,7 +71,7 @@ inline void outputBuilder(const fs::path & argInputFileName,
     varOutFile << "extern std::string_view "sv;
     varOutFile << argBuilder.functionName;
     varOutFile << " ( ) { "sv;
-    varOutFile << std::endl;
+    varOutFile << '\n';
     varOutFile << "return "sv;
     varOutFile << u8R"=========(u8R"=l=i=m=i=t=w()========="sv;
     varOutFile << varInputFile.rdbuf();
