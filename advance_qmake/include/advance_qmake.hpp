@@ -33,6 +33,8 @@ inline decltype(auto) streamFileName(const T & arg) {
 }
 
 inline auto getNow() {
-    return std::chrono::high_resolution_clock::now().time_since_epoch().count();
+    return std::chrono::duration_cast<std::chrono::seconds>(
+        std::chrono::high_resolution_clock::now()
+        .time_since_epoch()).count();
 }
 
