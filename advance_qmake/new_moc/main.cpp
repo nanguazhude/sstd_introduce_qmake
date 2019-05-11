@@ -11,20 +11,32 @@ public:
     std::string functionName;
 };
 
-inline constexpr const static std::array globalUtf8Bom{ '1','2','4' };
+inline constexpr const static std::array globalUtf8Bom{ '\xEF','\xBB','\xBF' };
 
 template<typename T>
 inline void removeUtf8Bom(T & arg) {
     std::array varTmpBuffer{ '1','2','3' };
-
+    arg.read(varTmpBuffer.data(), varTmpBuffer.size());
+    if (arg.gcount() < 3) {
+    } else {
+        if (globalUtf8Bom == varTmpBuffer) {
+            return;
+        }
+    }
+    arg.clear();
+    arg.seekg(0);
+    return;
 }
 
 inline void createBuilder(const fs::path & argInputFileName, Builder & argBuilder) {
     std::ifstream varReadFile{ streamFileName(argInputFileName) ,std::ios::binary };
+    if (!varReadFile.is_open()) {
+        return;
+    }
     static const std::regex fileNameRegex{ u8R"===(\s*fileName:(\S+)\s*)===" };
     static const std::regex functionNameRegex{ u8R"===(\s*functionName:(\S+)\s*)===" };
     std::string varLine;
-    removeUtf8Bom(argInputFileName);
+    removeUtf8Bom(varReadFile);
     while (varReadFile.good()) {
         std::getline(varReadFile, varLine);
         std::smatch varMatch;
@@ -46,7 +58,7 @@ inline void outputBuilder(const fs::path & argInputFileName,
     auto varInputFileName = argInputFileName;
     varInputFileName.replace_filename(argBuilder.fileName);
     std::ifstream varInputFile{ streamFileName(varInputFileName) ,std::ios::binary };
-    if (false == varInputFile.is_open()) {
+    if (!varInputFile.is_open()) {
         return;
     }
     varOutFile.sync_with_stdio(false);

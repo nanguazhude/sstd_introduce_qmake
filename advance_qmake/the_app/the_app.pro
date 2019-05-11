@@ -6,7 +6,7 @@ INCLUDEPATH += $$PWD/../include
 CONFIG(debug,debug|release){
     TARGET = the_app_debug
 }else{
-    TARGET = the_app_link
+    TARGET = the_app
 }
 
 win32-msvc*{
