@@ -73,9 +73,9 @@ inline void outputBuilder(const fs::path & argInputFileName,
     varOutFile << " ( ) { "sv;
     varOutFile << std::endl;
     varOutFile << "return "sv;
-    varOutFile << u8R"=========(u8R"=-=-=-=-=-=-()========="sv;
+    varOutFile << u8R"=========(u8R"=l=i=m=i=t=w()========="sv;
     varOutFile << varInputFile.rdbuf();
-    varOutFile << u8R"=========()=-=-=-=-=-=-"sv)========="sv;
+    varOutFile << u8R"=========()=l=i=m=i=t=w"sv)========="sv;
     varOutFile << u8R"(;)";
     varOutFile << '\n';
     varOutFile << "}";
