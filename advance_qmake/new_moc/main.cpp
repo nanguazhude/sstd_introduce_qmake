@@ -33,8 +33,8 @@ inline void createBuilder(const fs::path & argInputFileName, Builder & argBuilde
     if (!varReadFile.is_open()) {
         return;
     }
-    static const std::regex fileNameRegex{ u8R"===(\s*fileName:(\S+)\s*)===" };
-    static const std::regex functionNameRegex{ u8R"===(\s*functionName:(\S+)\s*)===" };
+    static const std::regex fileNameRegex{ u8R"===(\s*fileName\s*:\s*(\S+)\s*)===" };
+    static const std::regex functionNameRegex{ u8R"===(\s*functionName\s*:\s*(\S+)\s*)===" };
     std::string varLine;
     removeUtf8Bom(varReadFile);
     while (varReadFile.good()) {
