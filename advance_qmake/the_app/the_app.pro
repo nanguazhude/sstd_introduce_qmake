@@ -16,7 +16,7 @@ win32-msvc*{
     LIBS += -lstdc++fs
 }
 
-NEW_MOC_HEADERS =         test2.hpp test1.hpp
+NEW_MOC_HEADERS =         $${PWD}/test2.hpp $${PWD}/test1.hpp
 new_moc.input =           NEW_MOC_HEADERS
 new_moc.dependency_type = TYPE_C
 new_moc.variable_out =    SOURCES
