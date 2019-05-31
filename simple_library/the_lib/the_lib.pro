@@ -25,7 +25,3 @@ win32-msvc*{
 }
 
 DEFINES *= D_THE_LIB_WHEN_BUILD
-
-
-
-

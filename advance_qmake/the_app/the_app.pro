@@ -67,4 +67,3 @@ SOURCES += $$PWD/main.cpp
 
 #/*endl_input_of_latex_for_clanguage_lick*/
 #$$escape_expand(\\n\\t)
-

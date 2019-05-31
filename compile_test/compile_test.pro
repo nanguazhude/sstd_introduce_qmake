@@ -8,6 +8,3 @@ qtCompileTest(testFromCharsLongDouble)
 
 SUBDIRS += $$PWD/the_app1
 SUBDIRS += $$PWD/the_app2
-
-
-

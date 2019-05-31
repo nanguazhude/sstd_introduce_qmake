@@ -6,4 +6,3 @@ CONFIG(debug,debug|release){
 }else{
     LIBS += -lthe_lib
 }
-

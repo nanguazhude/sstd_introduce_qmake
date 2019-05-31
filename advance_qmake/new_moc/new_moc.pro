@@ -17,10 +17,3 @@ win32-msvc*{
 }
 
 SOURCES += $$PWD/main.cpp
-
-
-
-
-
-
-

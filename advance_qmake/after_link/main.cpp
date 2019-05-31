@@ -6,4 +6,3 @@ int main(int, char ** argv) {
     std::ofstream varOutStream{ streamFileName(varOutPath/"after_link.txt"sv) };
     varOutStream << getNow() << std::endl;
 }
-

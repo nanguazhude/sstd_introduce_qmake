@@ -9,5 +9,3 @@ int main(int ,char **){
     std::cout << getTest2String() ;
 
 }
-
-

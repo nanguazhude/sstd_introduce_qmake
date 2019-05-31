@@ -28,15 +28,3 @@ equals(TEMPLATE, "vcapp") {
 include($$PWD/../the_lib/import_the_lib.pri)
 
 SOURCES += $$PWD/main.cpp
-
-
-
-
-
-
-
-
-
-
-
-

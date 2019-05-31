@@ -9,14 +9,3 @@ sstd::TheLib::TheLib(){
 void sstd::TheLib::printHellowWorld(){
     std::cout << "Hellow World!"sv <<std::endl;
 }
-
-
-
-
-
-
-
-
-
-
-

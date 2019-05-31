@@ -61,7 +61,7 @@ inline void outputBuilder(const fs::path & argInputFileName,
     if (!varInputFile.is_open()) {
         return;
     }
-    varOutFile.sync_with_stdio(false); 
+    varOutFile.sync_with_stdio(false);
     varOutFile.write(globalUtf8Bom.data(), globalUtf8Bom.size());
     varOutFile << '\n';
     varOutFile << "#include <string_view>"sv;
@@ -92,4 +92,3 @@ int main(int, char **argv) {
     outputBuilder(varInputPath, varOutputPath, varBuilder);
 
 }
-

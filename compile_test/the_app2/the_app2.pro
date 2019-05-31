@@ -8,16 +8,3 @@ CONFIG += c++17
 config_testFromCharsLongDouble{
     DEFINES *= HAS_FROM_CHARS_LONGDOUBLE
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
